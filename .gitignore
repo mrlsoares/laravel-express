@@ -1,8 +1,0 @@
-
-.gitignore
-/vendor
-/node_modules
-Homestead.yaml
-.env
-public_html
-.idea/
