@@ -16,8 +16,7 @@ class TestController extends Controller
      */
     public function index($nome)
     {
-
-		    return view('test.index', ['nome' => $nome]);
+        return view('test.index', ['nome' => $nome]);
     }
 	public function notas()
 	{
