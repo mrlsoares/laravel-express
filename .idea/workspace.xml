@@ -440,7 +440,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="0" y="0" width="1346" height="741" extended-state="4" />
+=======
+    <frame x="0" y="0" width="1352" height="741" extended-state="4" />
+>>>>>>> 4338d04af199c9a1831ecb2873fbfc26b5c5e701
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
