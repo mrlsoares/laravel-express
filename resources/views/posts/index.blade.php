@@ -10,7 +10,15 @@
 
         <h2>{{$post->title}}</h2>
         <p>{{$post->content}}</p>
-        <h3>Comment</h3>
+
+        <b>Tags:</b> <br>
+        <ul>
+            @foreach($post->tags as $tag)
+                <li>{{$tag->name}}</li>
+            @endforeach
+        </ul>
+
+        <h3>Comments</h3>
         @foreach($post->comments as $coment)
             <b>Name</b>:{{$coment->name}}<br>
             <b>Comment</b>:{{$coment->comment}}
