@@ -25,7 +25,7 @@ class PostAdminController extends Controller
 	}
 	public function index()
 	{
-		$posts= $this->post->all();
+		$posts= $this->post->paginate(5);
 		//print_r($posts);
 
 		return view('admin.posts.index',compact('posts'));

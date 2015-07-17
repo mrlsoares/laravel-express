@@ -23,7 +23,7 @@
       </tbody>
 
   </table>
-
+{!! $posts->render() !!}
 
 
 
