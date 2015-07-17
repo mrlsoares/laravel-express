@@ -1,9 +1,7 @@
 @extends('template')
 @section('title')
-    Blog
+   Area Administrativa
 @endsection
 @section('content')
-    <h1>Blog</h1>
-    <hr/>
-
+    <h1>Blog Admin</h1>
 @stop
