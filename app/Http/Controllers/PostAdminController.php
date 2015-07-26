@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests;
 use App\Post;
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
 class PostAdminController extends Controller
 {
@@ -27,7 +25,16 @@ class PostAdminController extends Controller
 	{
 		$posts= $this->post->paginate(5);
 		//print_r($posts);
-
 		return view('admin.posts.index',compact('posts'));
 	}
+	public function create()
+	{
+		return view('admin.posts.create');
+	}
+	public function store(Requests\PostRequest $request)
+	{
+		$this->post->create($request->all());
+		return redirect()->route('admin.posts.index');
+	}
+
 }

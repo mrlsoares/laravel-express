@@ -20,4 +20,6 @@ Route::get('/', function () {
 Route::get('ola/{nome}','TestController@index');
 Route::get('notas','TestController@notas');
 Route::get('blog','PostsController@index');
-Route::get('admin','PostAdminController@index');
+Route::get('admin/posts',       ['as'=>'admin.posts.index', 'uses'=>'PostAdminController@index']);
+Route::get('admin/posts/create',['as'=>'admin.posts.create', 'uses'=>'PostAdminController@create']);//['as'=>'admin.posts.create','uses'=>'PostAdminController@create']
+Route::post('admin/posts/store',['as'=>'admin.posts.store', 'uses'=>'PostAdminController@store']);
