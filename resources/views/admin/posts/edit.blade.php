@@ -3,7 +3,7 @@
     Create New Post
 @endsection
 @section('content')
-    <h1>Create New Post</h1>
+    <h1>Edit Post:{{$post->title}}</h1>
 	@if($errors->any())
 		<ul class="alert">
 			@foreach($errors->all() as $error)
@@ -11,12 +11,12 @@
 			@endforeach
 		</ul>
 	@endif
-    {!!Form::open(['route'=>'admin.posts.store','method'=>'post'])!!}
-    @include('admin.posts.form')
+    {!!Form::model($post,['route'=>['admin.posts.update',$post->id],'method'=>'put'])!!}
+		@include('admin.posts.form')
 
     <!---  Field --->
     <div class="form-group">
-        {!! Form::submit('create', ['class' => 'btn btn-primary']) !!}
+        {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
     </div>
     {!!Form::close() !!}
 @stop

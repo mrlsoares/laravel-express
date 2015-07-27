@@ -23,3 +23,6 @@ Route::get('blog','PostsController@index');
 Route::get('admin/posts',       ['as'=>'admin.posts.index', 'uses'=>'PostAdminController@index']);
 Route::get('admin/posts/create',['as'=>'admin.posts.create', 'uses'=>'PostAdminController@create']);//['as'=>'admin.posts.create','uses'=>'PostAdminController@create']
 Route::post('admin/posts/store',['as'=>'admin.posts.store', 'uses'=>'PostAdminController@store']);
+Route::get('admin/posts/edit/{id}', ['as'=>'admin.posts.edit', 'uses'=>'PostAdminController@edit']);
+Route::put('admin/posts/update/{id}', ['as'=>'admin.posts.update', 'uses'=>'PostAdminController@update']);
+Route::delete('admin/posts/destroy/{id}', ['as'=>'admin.posts.destroy', 'uses'=>'PostAdminController@destroy']);
