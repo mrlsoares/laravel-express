@@ -19,12 +19,13 @@ class PostAdminController extends Controller
 	 */
 	public function __construct(Post $post)
 	{
-
 		$this->post = $post;
 	}
+
+
 	public function index()
 	{
-		$posts= $this->post->paginate(5);
+		$posts= $this->post->paginate(10);
 		//print_r($posts);
 		return view('admin.posts.index',compact('posts'));
 	}
@@ -52,6 +53,7 @@ class PostAdminController extends Controller
 	}
 	public function destroy($id)
 	{
+		//var_dump($id);
 		$this->post->find($id)->delete();
 		return redirect()->route('admin.posts.index');
 	}
